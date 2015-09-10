@@ -10,8 +10,8 @@ module Rapidfire
       @answer_group_builder = AnswerGroupBuilder.new(answer_group_params)
 
       if @answer_group_builder.save
-        binding.pry
-        redirect_to main_app.new_board_path
+        
+        redirect_to main_app.new_board_path(my_result: params[:my_result])
       else
         render :new
       end

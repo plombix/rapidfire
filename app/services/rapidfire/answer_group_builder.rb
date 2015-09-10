@@ -34,7 +34,8 @@ module Rapidfire
 
     def save(options = {})
       save!(options)
-      Sondage::Application::ApplicationController.set_myresult(@answer_group.id)
+      binding.pry
+      #Sondage::Application::ApplicationController.set_myresult(@answer_group.id)
     rescue ActiveRecord::ActiveRecordError => e
       # repopulate answers here in case of failure as they are not getting updated
       @answers = @question_group.questions.collect do |question|

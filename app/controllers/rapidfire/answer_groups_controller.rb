@@ -10,6 +10,7 @@ module Rapidfire
       @answer_group_builder = AnswerGroupBuilder.new(answer_group_params)
 
       if @answer_group_builder.save
+        binding.pry
         redirect_to question_groups_path
       else
         render :new

@@ -34,6 +34,7 @@ module Rapidfire
 
     def save(options = {})
       save!(options)
+      binding.pry
     rescue ActiveRecord::ActiveRecordError => e
       # repopulate answers here in case of failure as they are not getting updated
       @answers = @question_group.questions.collect do |question|

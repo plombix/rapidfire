@@ -26,6 +26,7 @@ module Rapidfire
 
         QuestionResult.new(question: question, results: results)
       end
+      binding.pry
     end
   end
 end

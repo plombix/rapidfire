@@ -17,7 +17,7 @@ module Rapidfire
             answers = question.answers.map(&:answer_text).map do |text|
               text.to_s.split(Rapidfire.answers_delimiter)
             end.flatten
-
+binding.pry
             answers.inject(Hash.new(0)) { |total, e| total[e] += 1; total }
           when Rapidfire::Questions::Short, Rapidfire::Questions::Date,
             Rapidfire::Questions::Long, Rapidfire::Questions::Numeric

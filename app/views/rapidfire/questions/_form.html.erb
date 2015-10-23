@@ -8,6 +8,9 @@
       <% end %>
     </ul>
   <% end %>
+  
+    <%= f.label :position %>
+  <%= f.text_field :position %>
 
   <%= f.label :type %>
   <%= f.select :type, ::Rapidfire::QuestionForm::QUESTION_TYPES, {}, id: "question_type" %>

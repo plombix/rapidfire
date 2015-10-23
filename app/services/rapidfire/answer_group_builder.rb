@@ -47,7 +47,7 @@ module Rapidfire
     private
     def build_answer_group
       @answer_group = AnswerGroup.new(user: user, question_group: question_group)
-      @answers = @question_group.questions.collect do |question|
+      @answers = @question_group.questions.order(:position).collect do |question|
         @answer_group.answers.build(question_id: question.id)
       end
     end

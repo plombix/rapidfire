@@ -17,7 +17,7 @@ module Rapidfire
       result
     end
 
-    attr_accessor :question_group, :question,
+    attr_accessor :question_group, :question,:position
       :type, :question_text, :answer_options, :answer_presence,
       :answer_minimum_length, :answer_maximum_length,
       :answer_greater_than_or_equal_to, :answer_less_than_or_equal_to

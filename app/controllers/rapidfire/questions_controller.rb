@@ -25,6 +25,8 @@ module Rapidfire
         end
       else
         respond_to do |format|
+          Rails.logger.warn "Saving..........NOPE!!!!"
+          binding.pry
           format.html { render :new }
           format.js
         end
@@ -47,6 +49,7 @@ module Rapidfire
         end
       else
         respond_to do |format|
+          Rails.logger.warn "Deleting..........NOPE!!!!"
           format.html { render :edit }
           format.js
         end

@@ -2,6 +2,7 @@ module Rapidfire
   class Question < ActiveRecord::Base
     belongs_to :question_group, :inverse_of => :questions
     has_many   :answers
+    has_one :party_advice, , :dependent => :destroy
 
     default_scope { order(:position) }
 

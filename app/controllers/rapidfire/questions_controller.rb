@@ -54,6 +54,8 @@ module Rapidfire
     end
 
     def destroy
+      binding.pry
+      
       @question.destroy
       respond_to do |format|
         format.html { redirect_to index_location }

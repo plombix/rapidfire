@@ -54,7 +54,8 @@ module Rapidfire
     end
 
     def destroy
-      binding.pry
+      PartyAdvice.where(rapidfire_question_id: @question.id).delete_all
+      
       
       @question.destroy
       respond_to do |format|

@@ -1,6 +1,6 @@
 module Rapidfire
   class Answer < ActiveRecord::Base
-    belongs_to :question
+    belongs_to :question  , dependent: :destroy
     belongs_to :answer_group, inverse_of: :answers
 
     validates :question, :answer_group, presence: true

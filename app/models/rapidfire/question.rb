@@ -2,6 +2,7 @@ module Rapidfire
   class Question < ActiveRecord::Base
     belongs_to :question_group, :inverse_of => :questions
     has_many   :answers
+    binding.pry
     
 
     default_scope { order(:position) }
